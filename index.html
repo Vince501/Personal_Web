@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Website</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/6909d047a1.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -29,6 +30,109 @@
 
         </div>
     </div>
-    
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about_col1">
+                    <img src="images/hoodie.png">
+                </div>
+                <div class="about_col2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>
+                        Industrious computer scientist with a zeal for innovation. Seeking a 
+                        position at your organization, where the strategic focus on delighting users aligns 
+                        with my creativity and desire to enhance productivity through technology. 
+                        My vision is to achieve high career growth through a continuous learning 
+                        process, keep myself dynamic, visionary, and competitive with the changing 
+                        scenario of the world and contribute to the growth of the environment interact 
+                        with.
+                    </p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Web/Mobile App Development</span><br>Designing and development of Web/Android applications</li>
+                            <li><span>Data Analysis</span><br>Data Manipulation, Visualiation, ML models, Reports etc</li>
+                            <li><span>System Administration</span><br>Maintenance and Implementation of systems</li>
+                            <li><span>System Design, Analysis and Testing</span><br>SDLC of systems</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Feb 2022 - March 2022</span><br>Student trainee at ABNO Softwares International</li>
+                            <li><span>Jan 2021 - March 2021</span><br>Student trainee at Nairobi Technical Training Institute</li>
+                            
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2019 - 2022</span><br>Bachelor of Science in Informatics and Computer Science, Strathmore 
+                                University</li>
+                            <li><span>2015 - 2018</span><br>High school Certificate, Nairobi School</li>                            
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code fa-fade"></i>
+                    <h2>Web Development</h2>
+                    <P>
+                        Creating, Building, and Maintaining of websites. Includes aspects such as web design, web publishing, web programming, and database management.
+                    </P>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-android fa-bounce"></i>
+                    <h2>Android Development</h2>
+                    <p>
+                        Creating mobile applications for the Android operating system. Prefered Language Java
+                    </p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-chart-simple fa-flip"></i>
+                    <h2>Data Analysis</h2>
+                    <p>
+                        SQL,Spreadsheets, Critical Thinking, Statistical programming languages, Data visualization, Public speaking, Machine learning, Problem-solving etc 
+                    </p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link")
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script>
+
 </body>
 </html>
